@@ -11,19 +11,15 @@
         <th>NPM</th>
         <th>DOB</th>
       </tr>
-      <!-- TODO loop from Friend model -->
-      <!-- EXAMPLE SECTION -->
-      <tr>
-        <td>Asmara Nugi</td>
-        <td>1706032156</td>
-        <td>May 1, 1999</td>
-      </tr>
-      <tr>
-        <td>Fadli Rais</td>
-        <td>1706032370</td>
-        <td>Sept 11, 1998</td>
-      </tr>
-      <!-- END SECTION -->
+      {% if friends %}
+        {% for friend in besties %}
+        <tr>
+            <td>{{ friend.name }}</td>
+            <td>{{ friend.npm }}</td>
+            <td>{{ friend.dob }}</td>
+        </tr>
+        {% endif %}
+      {% endfor %}
     </table>
   </body>
 </html>
