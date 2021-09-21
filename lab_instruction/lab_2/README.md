@@ -157,13 +157,13 @@ Kemudian juga ada beberapa pertanyaan singkat yang perlu dijawab dalam file `lab
 
 6. Return `Note` in XML format:
 
-   1. [ ] Import `HttpResponse` from `django.http.response` at the beginning of `lab_2/views.py`.
-   2. [ ] Import `serializers` from `django.core` below import in step 6.1.
-   3. [ ] Create `xml` method in `lab_2/views.py` that render XML for our response.
-   4. [ ] Load `Note` model in `xml` method, so you can show it later.
-   5. [ ] Serialize data from `Note` model into XML by using this code: `data = serializers.serialize('xml', Note.objects.all())`.
-   6. [ ] Return the `xml` method with the following code: `return HttpResponse(data, content_type="application/xml")`.
-   7. [ ] Add `/xml` route into `lab_2/urls.py`, so you can access the result by accessing [http://localhost:8000/lab-2/xml](http://localhost:8000/lab-2/xml).
+   1. [X] Import `HttpResponse` from `django.http.response` at the beginning of `lab_2/views.py`.
+   2. [X] Import `serializers` from `django.core` below import in step 6.1.
+   3. [X] Create `xml` method in `lab_2/views.py` that render XML for our response.
+   4. [X] Load `Note` model in `xml` method, so you can show it later.
+   5. [X] Serialize data from `Note` model into XML by using this code: `data = serializers.serialize('xml', Note.objects.all())`.
+   6. [X] Return the `xml` method with the following code: `return HttpResponse(data, content_type="application/xml")`.
+   7. [X] Add `/xml` route into `lab_2/urls.py`, so you can access the result by accessing [http://localhost:8000/lab-2/xml](http://localhost:8000/lab-2/xml).
 
 7. Return `Note` in JSON format:
 
