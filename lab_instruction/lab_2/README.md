@@ -167,13 +167,13 @@ Kemudian juga ada beberapa pertanyaan singkat yang perlu dijawab dalam file `lab
 
 7. Return `Note` in JSON format:
 
-   1. [ ] Create `json` method in `lab_2/views.py` that render JSON for our response.
-   2. [ ] Load `Note` model in `json` method, so you can show it later.
-   3. [ ] Serialize data from `Note` model into JSON by using this code: `data = serializers.serialize('json', Note.objects.all())`.
-   4. [ ] Return the `json` method with the following code: `return HttpResponse(data, content_type="application/json")`.
-   5. [ ] Add `/json` route into `lab_2/urls.py`, so you can access the result by accessing [http://localhost:8000/lab-2/json](http://localhost:8000/lab-2/json).
+   1. [X] Create `json` method in `lab_2/views.py` that render JSON for our response.
+   2. [X] Load `Note` model in `json` method, so you can show it later.
+   3. [X] Serialize data from `Note` model into JSON by using this code: `data = serializers.serialize('json', Note.objects.all())`.
+   4. [X] Return the `json` method with the following code: `return HttpResponse(data, content_type="application/json")`.
+   5. [X] Add `/json` route into `lab_2/urls.py`, so you can access the result by accessing [http://localhost:8000/lab-2/json](http://localhost:8000/lab-2/json).
 
-8. [ ] Access all the endpoint that you have built in this lab using Web Browser, cURL, or Postman.
+8. [X] Access all the endpoint that you have built in this lab using Web Browser, cURL, or Postman.
 
 9. [ ] Write the answer from the question above in `lab_answer/lab_2.md` file.
 

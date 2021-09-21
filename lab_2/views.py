@@ -16,3 +16,8 @@ def index(request):
 def xml(request):
     data = serializers.serialize('xml', Note.objects.all())
     return HttpResponse(data, content_type="application/xml")
+
+
+def json(request):
+    data = serializers.serialize('json', Note.objects.all())
+    return HttpResponse(data, content_type="application/json")
