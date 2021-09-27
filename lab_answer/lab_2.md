@@ -17,7 +17,7 @@
 
 2. Perbedaan antara HTML dan XML [Referensi 1](https://www.geeksforgeeks.org/html-vs-xml/) [Referensi 2](https://www.upgrad.com/blog/html-vs-xml/#:~:text=HTML%20and%20XML%20are%20related,language%20that%20defines%20other%20languages.)
 
-| header | header |
+| HTML | XML |
 | ------ | ------ |
 | Merupakan singkatan dari Hyper Text Markup Language | Merupakan singkatan dari Extensible Markup Language |
 | Bersifat statis | Bersifat dinamis |
