@@ -75,3 +75,11 @@ h5 {
     font-family: 'Noto Sans Mono', monospace;
     font-weight: 600;
 }
+
+p {
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 500;
+    margin: auto;
+    width: 50%;
+}
