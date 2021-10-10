@@ -34,16 +34,36 @@
     <div class="container">
         <div class="card-columns">
             {% for note in notes %}
-            <div class="card border-primary">
-                <div class="card-body">
-                    <div class="card-header">
-                        <h5 class="card-title m-auto">
-                            Judul: {{ note.message_title }}
-                        </h5>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                            <div class="card-body">
+                                <div class="card-header">
+                                    <h5 class="card-title m-auto">
+                                        To: {{ note.message_to }}
+                                    </h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="card-footer m-auto">
+                                    From: {{ note.message_from }}
+                                    </h5>
+                                </div>
+                            </div>
                     </div>
-                    <h6 class="card-subtitle mt-2 mb-2">To: {{ note.message_to }}</h5>
-                    <h6 class="card-subtitle mb-2">From: {{ note.message_from }}</h5>
-                    <p class="card-text">{{ note.message_content }}</p>
+                    <div class="flip-card-back">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h5 class="card-title m-auto">
+                                    Judul: {{ note.message_title }}
+                                </h5>
+                            </div>
+                            <div class="card-footer">
+                                <h5 class="card-footer m-auto">
+                                {{ note.message_content }}
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             {% endfor %}
