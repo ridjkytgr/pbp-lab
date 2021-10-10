@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend Forms</title>
+    <link href="{% static 'css/form_style.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right,#87b5ff ,#1f74ff);">
+        <a class="navbar-brand" href="add-note">Lab 4</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="/lab-4">Table</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="note-list">Card</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="add-note">Form</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+        <!-- Content -->
+      <h2 style="font-family: 'Noto Sans Mono', monospace; font-weight: 700;">Notes List - Form</h2>
+      <form action="" method="POST">
+          {% csrf_token %}
+          {{ form.as_p}}
+          <input type="submit" value="Submit">
+      </form>
+  </body>
+</html>

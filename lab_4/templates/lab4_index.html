@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Notes Lists - Table View</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{% static 'css/table_style.css' %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right,#87b5ff ,#1f74ff);">
+        <a class="navbar-brand" href="/lab-4">Lab 4</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/lab-4">Table</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="note-list">Card</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add-note">Form</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+      <h2>Notes List - Table View</h2>
+    <table class = "styled-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>To</th>
+        <th>From</th>
+        <th>Title</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+      {% if notes %}
+        {% for note in notes %}
+    <tbody>
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ note.message_to }}</td>
+            <td>{{ note.message_from }}</td>
+            <td>{{ note.message_title }}</td>
+            <td>{{ note.message_content }}</td>
+        </tr>
+    </tbody>
+        {% endfor %}
+    {% endif %}
+    </table>
+  </body>
+</html>

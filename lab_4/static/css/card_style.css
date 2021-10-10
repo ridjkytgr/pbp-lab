@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+.card:hover {
+    background-color: #75a4fa;
+}
+
+.card {
+    width: 20rem; 
+    margin: 5px;
+}
+
+.card-text,
+.card-title {
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 600;
+}
+
+.card-columns {
+    column-count: 3;
+}
+
+.card-subtitle {
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 500;
+}
+
+h2 {
+    text-align: center;
+    margin: 5px;
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 700;
+}

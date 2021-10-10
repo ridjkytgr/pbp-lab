@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 500;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.styled-table thead tr {
+    background-color: #193d91;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 20px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 2px solid #becbe8;
+    font-weight: 550;
+}
+
+.styled-table tr:hover {
+    background-color: #427ef5;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 700;
+}
+
