@@ -35,3 +35,48 @@ class _SecondaryButtonState extends State<SecondaryButton> {
             style: ElevatedButton.styleFrom(primary: const Color(0xffff0000))));
   }
 }
+
+class RoleRadioButton extends StatefulWidget {
+  const RoleRadioButton({Key? key}) : super(key: key);
+
+  @override
+  _RoleRadioButtonState createState() => _RoleRadioButtonState();
+}
+
+enum RoleChoice { penerima, penyedia }
+
+RoleChoice? _roleChoice = RoleChoice.penerima;
+
+class _RoleRadioButtonState extends State<RoleRadioButton> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: const Text('Penerima'),
+          leading: Radio<RoleChoice>(
+            value: RoleChoice.penerima,
+            groupValue: _roleChoice,
+            onChanged: (RoleChoice? value) {
+              setState(() {
+                _roleChoice = value;
+              });
+            },
+          ),
+        ),
+        ListTile(
+          title: const Text('Penyedia'),
+          leading: Radio<RoleChoice>(
+            value: RoleChoice.penyedia,
+            groupValue: _roleChoice,
+            onChanged: (RoleChoice? value) {
+              setState(() {
+                _roleChoice = value;
+              });
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}

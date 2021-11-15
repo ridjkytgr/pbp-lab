@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TextFieldAuth extends StatefulWidget {
-  const TextFieldAuth({Key? key, required this.label}) : super(key: key);
+class AuthText extends StatefulWidget {
+  const AuthText({Key? key, required this.label}) : super(key: key);
   final String label;
   @override
-  _TextFieldAuthState createState() => _TextFieldAuthState();
+  _AuthTextState createState() => _AuthTextState();
 }
 
-class _TextFieldAuthState extends State<TextFieldAuth> {
+class _AuthTextState extends State<AuthText> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -16,7 +16,7 @@ class _TextFieldAuthState extends State<TextFieldAuth> {
         Expanded(
           child: TextFormField(
             decoration: InputDecoration(
-                hintText: "johndoe@gmail.com",
+                label: Text(widget.label),
                 contentPadding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
